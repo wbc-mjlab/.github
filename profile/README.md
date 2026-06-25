@@ -50,16 +50,6 @@ Each paper's knobs live in a small env builder — e.g. [G1 configs](https://git
 
 Already wired from recent papers: ZEST-style rewards + RSI, BeyondMimic binary-failure sampling, EMA similarity metrics, multi-clip motion libraries, deploy-style obs export.
 
-## Quick start (sim)
-
-```bash
-git clone https://github.com/wbc-mjlab/wbc-mjlab.git && cd wbc-mjlab
-uv run wbc-mjlab-data-to-npz --robot g1 --dataset samples
-uv run wbc-mjlab-train --task Wbc-G1 --dataset samples
-```
-
-13 bundled [sample CSVs](https://github.com/wbc-mjlab/wbc-mjlab/blob/main/data/g1/samples/README.md) (LAFAN1 + BONES-SEED) — no full dataset download required. Requires mjlab ≥ 1.4 + GPU for training.
-
 ## Sim → real (G1)
 
 1. Train / export in **wbc-mjlab** (`params/policy.onnx` + `params/config.yaml`)
