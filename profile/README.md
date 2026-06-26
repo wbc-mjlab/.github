@@ -3,7 +3,9 @@
 **One shared MDP for whole-body motion tracking on [mjlab](https://github.com/mujocolab/mjlab).**
 
 Built on mjlab's sim + RL stack. Recent humanoid WBC work ([ZEST](https://arxiv.org/abs/2602.00401), [BeyondMimic](https://beyondmimic.github.io/), [SONIC](https://arxiv.org/abs/2511.07820), …) tends to ship as separate codebases — **wbc-mjlab** unifies that line on **one training surface**: paper-specific choices as **`--task` switches** (RSI, observations, rewards, DR). On deploy: **one policy, many motion clips** — swap at runtime, no checkpoint change.
-
+<a href="https://youtu.be/qTVkqvrJZM0">
+<img width="1762" height="1050" alt="wbc_mjlab_screen" src="https://github.com/user-attachments/assets/220a7577-de8a-4183-b963-8e3365d3e8db" />
+</a>
 ## Repos
 
 | Repo | Role |
