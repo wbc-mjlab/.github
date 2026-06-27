@@ -3,7 +3,9 @@
 **One shared MDP for whole-body motion tracking on [mjlab](https://github.com/mujocolab/mjlab).**
 
 Built on mjlab's sim + RL stack. Recent humanoid WBC work ([ZEST](https://arxiv.org/abs/2602.00401), [BeyondMimic](https://beyondmimic.github.io/), [SONIC](https://arxiv.org/abs/2511.07820), …) tends to ship as separate codebases — **wbc-mjlab** unifies that line on **one training surface**: paper-specific choices as **`--task` switches** (RSI, observations, rewards, DR). On deploy: **one policy, many motion clips** — swap at runtime, no checkpoint change.
-
+<a href="https://youtu.be/qTVkqvrJZM0">
+<img width="1762" height="1050" alt="wbc_mjlab_screen" src="https://github.com/user-attachments/assets/220a7577-de8a-4183-b963-8e3365d3e8db" />
+</a>
 ## Repos
 
 | Repo | Role |
@@ -52,16 +54,6 @@ More demos coming (side flips, backflips, …). See [wbc-demo](https://wbc-mjlab
 Each paper's knobs live in a small env builder — e.g. [G1 configs](https://github.com/wbc-mjlab/wbc-mjlab/tree/main/src/wbc_mjlab/robots/g1/configs) (`zest.py`, `binary_failure.py`, `wbc.py`). Add a module, register a `WbcTaskConfig`, same CLI and comparable runs.
 
 Already wired from recent papers: ZEST-style rewards + RSI, BeyondMimic binary-failure sampling, EMA similarity metrics, multi-clip motion libraries, deploy-style obs export.
-
-## Quick start (sim)
-
-```bash
-git clone https://github.com/wbc-mjlab/wbc-mjlab.git && cd wbc-mjlab
-uv run wbc-mjlab-data-to-npz --robot g1 --dataset samples
-uv run wbc-mjlab-train --task Wbc-G1 --dataset samples
-```
-
-13 bundled [sample CSVs](https://github.com/wbc-mjlab/wbc-mjlab/blob/main/data/g1/samples/README.md) (LAFAN1 + BONES-SEED) — no full dataset download required. Requires mjlab ≥ 1.4 + GPU for training.
 
 ## Sim → real (G1)
 
