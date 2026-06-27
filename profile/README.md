@@ -28,7 +28,7 @@ The bundled deploy policy already covers **walk, jog, run, crawl, fight, get up 
         <img src="assets/demo_screen.png" width="720" alt="wbc-demo — live MuJoCo + ONNX in the browser" />
       </a>
       <br>
-      <sub>MuJoCo + ONNX in the browser — idle, walk, fight, get up, lie down, … (<a href="https://github.com/wbc-mjlab/wbc-demo">wbc-demo</a>)</sub>
+      <sub>MuJoCo + ONNX in the browser — idle, walk, fight, get up, lie down, … (<a href="https://wbc-mjlab.github.io/wbc-demo/">wbc-demo</a>)</sub>
     </td>
   </tr>
   <tr>
