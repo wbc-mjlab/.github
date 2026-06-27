@@ -10,6 +10,7 @@ Built on mjlab's sim + RL stack. Recent humanoid WBC work ([ZEST](https://arxiv.
 |------|------|
 | [**wbc-mjlab**](https://github.com/wbc-mjlab/wbc-mjlab) | Training — shared MDP, G1 tasks, GMR PKL + batch NPZ conversion, ONNX export |
 | [**wbc-g1-deploy**](https://github.com/wbc-mjlab/wbc-g1-deploy) | Reference G1 runtime — one ONNX policy, clip library via `manifest.yaml` |
+| [**wbc-demo**](https://github.com/wbc-mjlab/wbc-demo) | In-browser live demo — MuJoCo WASM + ONNX, deploy-aligned clip UX |
 
 Upstream: [mujocolab/mjlab](https://github.com/mujocolab/mjlab) (extension, not a fork).
 
@@ -20,10 +21,12 @@ The bundled deploy policy already covers **walk, jog, run, crawl, fight, get up 
 <table>
   <tr>
     <td colspan="3" align="center">
-      <b>Sim (loopback)</b><br>
-      <a href="https://www.youtube.com/watch?v=CSyczObERIc">
-        <img src="https://img.youtube.com/vi/CSyczObERIc/maxresdefault.jpg" width="720" />
+      <b>Live demo (browser)</b><br>
+      <a href="https://wbc-mjlab.github.io/wbc-demo/">
+        <img src="assets/demo_screen.png" width="720" alt="wbc-demo — live MuJoCo + ONNX in the browser" />
       </a>
+      <br>
+      <sub>MuJoCo + ONNX in the browser — idle, walk, fight, get up, lie down, … (<a href="https://github.com/wbc-mjlab/wbc-demo">wbc-demo</a>)</sub>
     </td>
   </tr>
   <tr>
@@ -42,7 +45,7 @@ The bundled deploy policy already covers **walk, jog, run, crawl, fight, get up 
   </tr>
 </table>
 
-More demos coming (side flips, backflips, …). See [wbc-g1-deploy](https://github.com/wbc-mjlab/wbc-g1-deploy).
+More demos coming (side flips, backflips, …). See [wbc-demo](https://wbc-mjlab.github.io/wbc-demo/) and [wbc-g1-deploy](https://github.com/wbc-mjlab/wbc-g1-deploy).
 
 ## Tasks, not forks
 
