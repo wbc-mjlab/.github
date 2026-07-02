@@ -47,6 +47,12 @@ The bundled deploy policy already covers **walk, jog, run, crawl, fight, get up 
       <video src="https://github.com/user-attachments/assets/ac153760-fe59-4da2-8466-0ddd0a84bb89" width="100%" controls></video>
     </td>
   </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <b>Get up</b><br>
+      <video src="assets/get_up.mp4" width="33%" controls muted></video>
+    </td>
+  </tr>
 </table>
 
 More demos coming (side flips, backflips, …). See [wbc-demo](https://wbc-mjlab.github.io/wbc-demo/) and [wbc-g1-deploy](https://github.com/wbc-mjlab/wbc-g1-deploy).
