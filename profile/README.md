@@ -50,7 +50,7 @@ The bundled deploy policy already covers **walk, jog, run, crawl, fight, get up 
   <tr>
     <td colspan="3" align="center">
       <b>Get up</b><br>
-      <video src="assets/get_up.mp4" width="33%" controls muted></video>
+      <video src="https://github.com/wbc-mjlab/.github/raw/main/profile/assets/get_up.mp4" width="33%" controls muted></video>
     </td>
   </tr>
 </table>
