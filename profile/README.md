@@ -56,7 +56,10 @@ The bundled deploy policy already covers **walk, jog, run, crawl, fight, get up 
       <b>Flip</b><br>
       <video src="https://github.com/user-attachments/assets/1c1d2272-0eaf-4d53-9042-850adcb7be05" width="100%" controls></video>
     </td>
-    <td align="center" width="33%"></td>
+    <td align="center" width="33%">
+      <b>Idle</b><br>
+      <video src="REPLACE_IDLE_USER_ATTACHMENTS_URL" width="100%" controls></video>
+    </td>
   </tr>
 </table>
 
