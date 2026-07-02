@@ -48,16 +48,15 @@ The bundled deploy policy already covers **walk, jog, run, crawl, fight, get up 
     </td>
   </tr>
   <tr>
-    <td colspan="3" align="center">
+    <td align="center" width="33%">
       <b>Get up</b><br>
-      <video src="https://github.com/user-attachments/assets/af9b8218-122d-4212-83e4-6c45cbc5b9a4" width="33%" controls></video>
+      <video src="https://github.com/user-attachments/assets/af9b8218-122d-4212-83e4-6c45cbc5b9a4" width="100%" controls></video>
     </td>
-  </tr>
-  <tr>
-    <td colspan="3" align="center">
+    <td align="center" width="33%">
       <b>Flip</b><br>
-      <video src="https://github.com/user-attachments/assets/1c1d2272-0eaf-4d53-9042-850adcb7be05" width="33%" controls></video>
+      <video src="https://github.com/user-attachments/assets/1c1d2272-0eaf-4d53-9042-850adcb7be05" width="100%" controls></video>
     </td>
+    <td align="center" width="33%"></td>
   </tr>
 </table>
 
