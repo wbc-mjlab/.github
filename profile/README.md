@@ -6,15 +6,23 @@ Built on mjlab's sim + RL stack. Recent humanoid WBC work ([ZEST](https://arxiv.
 
 **Modular by design:** one shared MDP and presets in the core repo; **robots plug in** via `register_wbc_extension` in a separate package (same `wbc-mjlab-train` / play CLIs, stock `apply_wbc` preset — no fork, no new preset per robot).
 
-<a href="https://youtu.be/qTVkqvrJZM0">
-<img width="1762" height="1050" alt="wbc_mjlab_screen" src="https://github.com/user-attachments/assets/220a7577-de8a-4183-b963-8e3365d3e8db" />
-</a>
+<p align="center">
+  <a href="https://github.com/wbc-mjlab/wbc-mjlab">
+    <img src="assets/wbc_play.png" width="100%" alt="WBC-MJLab — whole-body motion tracking on mjlab (Unitree G1)" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://wbc-mjlab.github.io/wbc-mjlab/">Documentation</a> ·
+  <a href="https://wbc-mjlab.github.io/wbc-demo/">Live demo</a> ·
+  <a href="https://youtu.be/qTVkqvrJZM0">Sim rollout video</a>
+</p>
 
 ## Repos
 
 | Repo | Role |
 |------|------|
-| [**wbc-mjlab**](https://github.com/wbc-mjlab/wbc-mjlab) | Training — shared MDP, presets, G1 tasks, GMR PKL + batch NPZ conversion, ONNX export ([PyPI](https://pypi.org/project/wbc-mjlab/)) |
+| [**wbc-mjlab**](https://github.com/wbc-mjlab/wbc-mjlab) | Training — shared MDP, presets, G1 tasks, GMR PKL + batch NPZ conversion, ONNX export ([PyPI](https://pypi.org/project/wbc-mjlab/) · [docs](https://wbc-mjlab.github.io/wbc-mjlab/)) |
 | [**wbc-mjlab-extension-h2**](https://github.com/wbc-mjlab/wbc-mjlab-extension-h2) | Reference **robot extension** (Unitree H2) — plug-in package via `register_wbc_extension`, no core fork |
 | [**wbc-g1-deploy**](https://github.com/wbc-mjlab/wbc-g1-deploy) | Reference G1 runtime — one ONNX policy, clip library via `manifest.yaml` |
 | [**wbc-demo**](https://github.com/wbc-mjlab/wbc-demo) | In-browser live demo — MuJoCo WASM + ONNX, deploy-aligned clip UX |
@@ -81,7 +89,7 @@ Paper knobs are **presets stacked on one MDP**, not separate codebases:
 
 **Add a paper setup:** new preset in `presets/`, wire it in `robots/<id>/tasks.py`, register a `WbcTaskConfig` — same CLI, same log layout, comparable runs.
 
-**Add a robot (external):** copy the [H2 extension](https://github.com/wbc-mjlab/wbc-mjlab-extension-h2) layout — robot assets, `base.py`, entry-point registration; reuse `apply_wbc` with no preset fork. Details: [docs/USAGE.md](https://github.com/wbc-mjlab/wbc-mjlab/blob/main/docs/USAGE.md) · [docs/TASKS.md](https://github.com/wbc-mjlab/wbc-mjlab/blob/main/docs/TASKS.md) · [CONTRIBUTING.md](https://github.com/wbc-mjlab/wbc-mjlab/blob/main/CONTRIBUTING.md).
+**Add a robot (external):** copy the [H2 extension](https://github.com/wbc-mjlab/wbc-mjlab-extension-h2) layout — robot assets, `base.py`, entry-point registration; reuse `apply_wbc` with no preset fork. Details: [documentation](https://wbc-mjlab.github.io/wbc-mjlab/) · [CONTRIBUTING.md](https://github.com/wbc-mjlab/wbc-mjlab/blob/main/CONTRIBUTING.md).
 
 Already wired: ZEST-style rewards + reward-aligned RSI, BeyondMimic binary-failure sampling, multi-clip motion libraries, deploy-style obs export, Viser play overlays (motion context + adaptive RSI bins).
 
@@ -93,7 +101,7 @@ Already wired: ZEST-style rewards + reward-aligned RSI, BeyondMimic binary-failu
 
 ## What's next
 
-Tech report, Sphinx docs site, SONIC-style task, and external preset modules as separate repos.
+Tech report, SONIC-style task, and external preset modules as separate repos.
 
 ## Status & community
 
