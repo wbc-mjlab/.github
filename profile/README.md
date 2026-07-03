@@ -4,6 +4,8 @@
 
 Built on mjlab's sim + RL stack. Recent humanoid WBC work ([ZEST](https://arxiv.org/abs/2602.00401), [BeyondMimic](https://beyondmimic.github.io/), [SONIC](https://arxiv.org/abs/2511.07820), …) tends to ship as separate codebases — **wbc-mjlab** unifies that line on **one training surface**: paper-specific choices as **`--task` switches** (RSI, observations, rewards, DR). On deploy: **one policy, many motion clips** — swap at runtime, no checkpoint change.
 
+**Modular by design:** one shared MDP and presets in the core repo; **robots plug in** via `register_wbc_extension` in a separate package (same `wbc-mjlab-train` / play CLIs, stock `apply_wbc` preset — no fork, no new preset per robot).
+
 <a href="https://youtu.be/qTVkqvrJZM0">
 <img width="1762" height="1050" alt="wbc_mjlab_screen" src="https://github.com/user-attachments/assets/220a7577-de8a-4183-b963-8e3365d3e8db" />
 </a>
@@ -13,6 +15,7 @@ Built on mjlab's sim + RL stack. Recent humanoid WBC work ([ZEST](https://arxiv.
 | Repo | Role |
 |------|------|
 | [**wbc-mjlab**](https://github.com/wbc-mjlab/wbc-mjlab) | Training — shared MDP, presets, G1 tasks, GMR PKL + batch NPZ conversion, ONNX export ([PyPI](https://pypi.org/project/wbc-mjlab/)) |
+| [**wbc-mjlab-extension-h2**](https://github.com/wbc-mjlab/wbc-mjlab-extension-h2) | Reference **robot extension** (Unitree H2) — plug-in package via `register_wbc_extension`, no core fork |
 | [**wbc-g1-deploy**](https://github.com/wbc-mjlab/wbc-g1-deploy) | Reference G1 runtime — one ONNX policy, clip library via `manifest.yaml` |
 | [**wbc-demo**](https://github.com/wbc-mjlab/wbc-demo) | In-browser live demo — MuJoCo WASM + ONNX, deploy-aligned clip UX |
 
@@ -74,8 +77,11 @@ Paper knobs are **presets stacked on one MDP**, not separate codebases:
 | **Shared MDP** | [`env/`](https://github.com/wbc-mjlab/wbc-mjlab/tree/main/src/wbc_mjlab/env) | Rewards, terminations, motion command, RSI, playback |
 | **Presets** | [`presets/`](https://github.com/wbc-mjlab/wbc-mjlab/tree/main/src/wbc_mjlab/presets) | Paper recipes as functions — `apply_zest`, `apply_wbc`, `apply_binary_failure`, `apply_se_actor` |
 | **Robot tasks** | [`robots/g1/tasks.py`](https://github.com/wbc-mjlab/wbc-mjlab/tree/main/src/wbc_mjlab/robots/g1/tasks.py) | Preset stacks + registered `--task` ids (`Wbc-G1`, `Wbc-G1-Zest`, …) |
+| **External robots** | [wbc-mjlab-extension-h2](https://github.com/wbc-mjlab/wbc-mjlab-extension-h2) | Separate repo: MJCF + `register_wbc_extension` → `Wbc-H2` on the same MDP |
 
-**Add a paper setup:** new preset in `presets/`, wire it in `robots/<id>/tasks.py`, register a `WbcTaskConfig` — same CLI, same log layout, comparable runs. Details: [docs/TASKS.md](https://github.com/wbc-mjlab/wbc-mjlab/blob/main/docs/TASKS.md) · [CONTRIBUTING.md](https://github.com/wbc-mjlab/wbc-mjlab/blob/main/CONTRIBUTING.md).
+**Add a paper setup:** new preset in `presets/`, wire it in `robots/<id>/tasks.py`, register a `WbcTaskConfig` — same CLI, same log layout, comparable runs.
+
+**Add a robot (external):** copy the [H2 extension](https://github.com/wbc-mjlab/wbc-mjlab-extension-h2) layout — robot assets, `base.py`, entry-point registration; reuse `apply_wbc` with no preset fork. Details: [docs/USAGE.md](https://github.com/wbc-mjlab/wbc-mjlab/blob/main/docs/USAGE.md) · [docs/TASKS.md](https://github.com/wbc-mjlab/wbc-mjlab/blob/main/docs/TASKS.md) · [CONTRIBUTING.md](https://github.com/wbc-mjlab/wbc-mjlab/blob/main/CONTRIBUTING.md).
 
 Already wired: ZEST-style rewards + reward-aligned RSI, BeyondMimic binary-failure sampling, multi-clip motion libraries, deploy-style obs export, Viser play overlays (motion context + adaptive RSI bins).
 
@@ -87,7 +93,7 @@ Already wired: ZEST-style rewards + reward-aligned RSI, BeyondMimic binary-failu
 
 ## What's next
 
-Tech report, Sphinx docs site, SONIC-style task, multi-robot registration API, and external preset modules as separate repos.
+Tech report, Sphinx docs site, SONIC-style task, and external preset modules as separate repos.
 
 ## Status & community
 
