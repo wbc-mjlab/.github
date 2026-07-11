@@ -45,36 +45,16 @@ The bundled deploy policy already covers **walk, jog, run, crawl, fight, get up 
     </td>
   </tr>
   <tr>
-    <td align="center" width="33%">
-      <b>Walk</b><br>
-      <video src="https://github.com/user-attachments/assets/0fb0dccc-fb4e-4c88-a8c0-50087bc46c9b" width="100%" controls></video>
-    </td>
-    <td align="center" width="33%">
-      <b>Fight</b><br>
-      <video src="https://github.com/user-attachments/assets/9384a32a-a8a2-42f9-9ff0-02bd03decf50" width="100%" controls></video>
-    </td>
-    <td align="center" width="33%">
-      <b>Jog</b><br>
-      <video src="https://github.com/user-attachments/assets/ac153760-fe59-4da2-8466-0ddd0a84bb89" width="100%" controls></video>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="33%">
-      <b>Get up</b><br>
-      <video src="https://github.com/user-attachments/assets/af9b8218-122d-4212-83e4-6c45cbc5b9a4" width="100%" controls></video>
-    </td>
-    <td align="center" width="33%">
-      <b>Flip</b><br>
-      <video src="https://github.com/user-attachments/assets/6e49f7e8-eda5-4a8a-aea2-df3a6507f62d" width="100%" controls></video>
-    </td>
-    <td align="center" width="33%">
-      <b>Idle</b><br>
-      <video src="https://github.com/user-attachments/assets/83481473-f6f9-4ec9-8c70-d95944a0a521" width="100%" controls></video>
+    <td colspan="3" align="center">
+      <b>Unitree G1 — one policy, many skills</b><br>
+      <video src="assets/wbc_g1_hardware_collage.mp4" width="100%" controls></video>
+      <br>
+      <sub>Get-up · idle · dance · fight · sprint · sideflip — same deploy policy, clip library switching (<a href="https://github.com/wbc-mjlab/wbc-g1-deploy">wbc-g1-deploy</a>)</sub>
     </td>
   </tr>
 </table>
 
-More demos coming (side flips, backflips, …). See [wbc-demo](https://wbc-mjlab.github.io/wbc-demo/) and [wbc-g1-deploy](https://github.com/wbc-mjlab/wbc-g1-deploy).
+More skills coming (backflips, …). See [wbc-demo](https://wbc-mjlab.github.io/wbc-demo/) and [wbc-g1-deploy](https://github.com/wbc-mjlab/wbc-g1-deploy).
 
 ## Tasks, not forks
 
