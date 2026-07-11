@@ -47,7 +47,7 @@ The bundled deploy policy already covers **walk, jog, run, crawl, fight, get up 
   <tr>
     <td colspan="3" align="center">
       <b>Unitree G1 — one policy, many skills</b><br>
-      <video src="https://github.com/user-attachments/assets/92c5a520-6fed-4580-9a99-999e87c01dad" width="100%" controls></video>
+      <img src="assets/wbc_g1_hardware_collage.gif" width="100%" alt="Unitree G1 — get-up, idle, dance, fight, sprint, sideflip" />
       <br>
       <sub>Get-up · idle · dance · fight · sprint · sideflip — same deploy policy, clip library switching (<a href="https://github.com/wbc-mjlab/wbc-g1-deploy">wbc-g1-deploy</a>)</sub>
     </td>
