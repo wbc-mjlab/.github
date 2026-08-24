@@ -13,6 +13,7 @@ Built on mjlab's sim + RL stack. Recent humanoid WBC work ([ZEST](https://arxiv.
 </p>
 
 <p align="center">
+  <a href="https://wbc-mjlab.github.io/.github/">Project page</a> ·
   <a href="https://wbc-mjlab.github.io/wbc-mjlab/">Documentation</a> ·
   <a href="https://wbc-mjlab.github.io/wbc-demo/">Live demo</a> ·
   <a href="https://youtu.be/qTVkqvrJZM0">Sim rollout video</a>
